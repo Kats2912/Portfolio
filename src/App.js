@@ -8,6 +8,7 @@ import { Hero } from "./components/HeroSection";
 
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -42,7 +43,8 @@ function App() {
             <Skills />
             <Experience />
           </Wrapper>
-          <Projects/>
+          <Projects />
+          <Contact/>
         </Body>
       </Router>
     </ThemeProvider>
