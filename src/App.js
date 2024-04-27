@@ -35,7 +35,7 @@ const Wrapper = styled.div`
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
-      <Router>
+      <Router basename="https://github.com/Kats2912/Portfolio">
         <Navbar />
         <Body>
           <Hero />
