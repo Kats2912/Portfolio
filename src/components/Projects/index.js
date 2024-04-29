@@ -12,7 +12,7 @@ import {
   CardContainer,
 } from "./ProjectStyle";
 
-const Projects = () => {
+const Projects = ({openModal,setOpenModal}) => {
   const [toggle, setToggle] = useState("all");
   return (
     <Container id="projects">
@@ -74,7 +74,7 @@ const Projects = () => {
                 setToggle("android app");
               }}
             >
-              WEB APPS
+              ANDROID APPS
             </ToogleButton>
           ) : (
             <ToogleButton
@@ -90,14 +90,14 @@ const Projects = () => {
         <CardContainer>
           {toggle === "all" &&
             projects.map((project) => {
-              return <ProjectCard project={project} />;
+              return <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal} />;
             })}
           {projects
             .filter((item) => {
               return item.category === toggle;
             })
             .map((project) => {
-              return <ProjectCard project={project} />;
+              return <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal} />;
             })}
         </CardContainer>
       </Wrapper>

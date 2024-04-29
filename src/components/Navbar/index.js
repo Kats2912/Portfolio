@@ -16,6 +16,7 @@ import {
   MobileMenu,
   MobileMenuLink,
 } from "./NavbarStyledComponent";
+import { Bio } from "../../data/constants";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -37,22 +38,15 @@ const Navbar = () => {
             <Span>Portfolio</Span>
           </a>
         </NavLogo>
-        <MobileIcon>
-          <FaBars
-            onClick={() => {
-              setOpen(!open);
-            }}
-          />
-        </MobileIcon>
         <NavItems>
           <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#experience">Experience</NavLink>
+          <NavLink href="#skills">Skills</NavLink>
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#contact">Contact</NavLink>
         </NavItems>
         <ButtonContainer>
-          <GitHubButton>Github Profile</GitHubButton>
+          <GitHubButton href={Bio.github} target="new">Github Profile</GitHubButton>
         </ButtonContainer>
       </NavbarContainer>
       {open && (

@@ -9,6 +9,9 @@ import { Hero } from "./components/HeroSection";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import { useState } from "react";
+import ProjectDetails from "./components/ProjectDetails";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -33,6 +36,7 @@ const Wrapper = styled.div`
 `;
 
 function App() {
+  const [openModal, setOpenModal] = useState({ state: false, project: null });
   return (
     <ThemeProvider theme={darkTheme}>
       <Router>
@@ -40,11 +44,21 @@ function App() {
         <Body>
           <Hero />
           <Wrapper>
-            <Skills />
             <Experience />
+            <Skills />
+            <br />
+            <br />
+            <br />
+            <br />
           </Wrapper>
-          <Projects />
-          <Contact />
+          <Wrapper>
+            <Projects openModal={openModal} setOpenModal={setOpenModal} />
+            <Contact />
+          </Wrapper>
+          <Footer />
+          {openModal.state &&
+            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+          }
         </Body>
       </Router>
     </ThemeProvider>

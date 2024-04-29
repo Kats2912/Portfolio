@@ -26,7 +26,9 @@ const ExperienceCard = ({ experience }) => {
         </Body>
       </Top>
       <Description>
-        {experience.desc}
+        {experience.desc?.map((description) => {
+          return (<Description>{description }</Description>)
+        })}
         {experience?.skills && (
           <>
             <br />

@@ -10,9 +10,9 @@ import {
   Description,
 } from "./ProjectCardStyle";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project ,setOpenModal}) => {
   return (
-    <Card>
+    <Card onClick={() => setOpenModal({state: true, project: project})}>
       <Image src={project.image} />
       <Tags>
         {project.tags.map((tag) => {
@@ -22,7 +22,9 @@ const ProjectCard = ({ project }) => {
       <Details>
         <Title>{project.title}</Title>
         <Date>{project.date}</Date>
-        <Description>{project.description}</Description>
+        {project.description.map((desc) => {
+          return (<Description>{desc}</Description>)
+        })}
       </Details>
     </Card>
   );
