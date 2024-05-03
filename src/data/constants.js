@@ -1,3 +1,4 @@
+
 export const Bio = {
   name: "Kartik Gupta",
   roles: ["Full Stack Developer", "Software Engineer", "Programmer"],
@@ -165,8 +166,7 @@ export const projects = [
       "•Architected a scalable and reliable backend infrastructure using AWS services for enhanced performance, scalability, and fault tolerance, ensuring optimal performance under high loads.",
       "",
     ],
-    image:
-      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
+    image:"https://qsr-image.s3.eu-north-1.amazonaws.com/upload/qsr.png",
     tags: [
       "Angular Js",
       "MongoDb",
@@ -192,7 +192,7 @@ export const projects = [
       "•Integrated Chart.js for visually appealing analytics dashboards, enabling visualization of key metrics forinformed decision-making.",
     ],
     image:
-      "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
+      "https://qsr-image.s3.eu-north-1.amazonaws.com/upload/car-rental.png",
     tags: ["HTML", "CSS", "Javascript", "IndexDb", "Angular Js", "Chart Js"],
     category: "web app",
     github: "https://github.com/Kats2912/Car-Rental-Website",
