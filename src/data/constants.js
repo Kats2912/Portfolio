@@ -195,7 +195,7 @@ export const projects = [
       "https://qsr-image.s3.eu-north-1.amazonaws.com/upload/car-rental.png",
     tags: ["HTML", "CSS", "Javascript", "IndexDb", "Angular Js", "Chart Js"],
     category: "web app",
-   // github: "https://github.com/Kats2912/Car-Rental-Website",
+    github: "https://github.com/Kats2912/Car-Rental-Website",
     // webapp: "https://vexa-app.netlify.app/",
   },
   {
